@@ -12,6 +12,14 @@ import java.util.Optional;
 
 public abstract class AbstractService<E, M, ID> {
 
+    /**
+     * E stands for class Entity
+     * M stand for class Model
+     * ID stand for class ID
+     * example UserService extends AbstractService<User, ModelUser, String>
+     *     why String ? because User has id with type class String
+     * **/
+
     CrudRepository<E, ID> entityRepository;
     EntityMapper<E, M> entityMapper;
 

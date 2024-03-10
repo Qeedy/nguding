@@ -11,6 +11,13 @@ import java.io.Serializable;
 
 public abstract class AbstractController<E, M, ID> implements InitializingBean {
 
+    /**
+     * E stands for class Entity
+     * M stand for class Model
+     * ID stand for class ID
+     * example UserController extends AbstractController<User, ModelUser, String>
+     *     why String ? because User has Id with type class String
+     * **/
     AbstractService<E, M, ID> service;
 
     public AbstractController(AbstractService<E, M, ID> service) {
